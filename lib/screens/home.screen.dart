@@ -78,88 +78,84 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Column(
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SvgPicture.asset("assets/logo/mz4h-light.svg",
-                        height: 50, width: 50, semanticsLabel: 'mz4h Logo'),
-                    const CircleAvatar(
-                      radius: 25,
-                      backgroundImage: NetworkImage(
-                          "https://plus.unsplash.com/premium_photo-1661629473263-572abf51d7c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"),
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                const Text(
-                  "Your program",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                  ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                const TopContentContainer(),
-                const SizedBox(
-                  height: 30,
-                ),
-                const Text(
-                  "New Releases",
-                  textAlign: TextAlign.start,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22,
-                  ),
-                ),
-                ListView.separated(
-                  padding: const EdgeInsets.all(8),
-                  itemCount: 5,
-                  shrinkWrap: true,
-                  primary: false,
-                  itemBuilder: (BuildContext context, int index) {
-                    return const ContentContainer();
-                  },
-                  separatorBuilder: (BuildContext context, int index) =>
-                      const Divider(),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text("Mobility",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 22,
-                        )),
-                    Row(
-                      children: const [
-                        Text("See All", style: TextStyle(color: Colors.white)),
-                        Icon(Icons.arrow_forward, color: Colors.white)
-                      ],
-                    )
-                  ],
-                ),
-                ListView.separated(
-                  padding: const EdgeInsets.all(8),
-                  itemCount: 5,
-                  shrinkWrap: true,
-                  primary: false,
-                  itemBuilder: (BuildContext context, int index) {
-                    return const ContentContainer();
-                  },
-                  separatorBuilder: (BuildContext context, int index) =>
-                      const Divider(),
-                ),
+                SvgPicture.asset("assets/logo/mz4h-light.svg",
+                    height: 50, width: 50, semanticsLabel: 'mz4h Logo'),
+                const CircleAvatar(
+                  radius: 25,
+                  backgroundImage: NetworkImage(
+                      "https://plus.unsplash.com/premium_photo-1661629473263-572abf51d7c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"),
+                )
               ],
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            const Text(
+              "Your program",
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+              ),
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            const TopContentContainer(),
+            const SizedBox(
+              height: 30,
+            ),
+            const Text(
+              "New Releases",
+              textAlign: TextAlign.start,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+              ),
+            ),
+            ListView.separated(
+              padding: const EdgeInsets.all(8),
+              itemCount: 5,
+              shrinkWrap: true,
+              primary: false,
+              itemBuilder: (BuildContext context, int index) {
+                return const ContentContainer();
+              },
+              separatorBuilder: (BuildContext context, int index) =>
+                  const Divider(),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text("Mobility",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22,
+                    )),
+                Row(
+                  children: const [
+                    Text("See All", style: TextStyle(color: Colors.white)),
+                    Icon(Icons.arrow_forward, color: Colors.white)
+                  ],
+                )
+              ],
+            ),
+            ListView.separated(
+              padding: const EdgeInsets.all(8),
+              itemCount: 5,
+              shrinkWrap: true,
+              primary: false,
+              itemBuilder: (BuildContext context, int index) {
+                return const ContentContainer();
+              },
+              separatorBuilder: (BuildContext context, int index) =>
+                  const Divider(),
             ),
           ],
         ),
